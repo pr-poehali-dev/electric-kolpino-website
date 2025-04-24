@@ -6,64 +6,71 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    --foreground: 240 10% 3.9%;
  
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
  
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
+    --popover-foreground: 240 10% 3.9%;
  
     --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
+    --card-foreground: 240 10% 3.9%;
  
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
  
-    --primary-foreground: 210 20% 98%;
+    --primary: 326 100% 60%;
+    --primary-foreground: 0 0% 100%;
  
-    --secondary-foreground: 220 14.3% 95.9%;
+    --secondary: 240 10% 3.9%;
+    --secondary-foreground: 0 0% 100%;
  
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
  
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive-foreground: 0 0% 98%;
  
-    --ring: 224 71.4% 4.1%;
+    --ring: 240 5% 64.9%;
  
     --radius: 0.5rem;
+
+    /* Tele2 specific colors */
+    --tele2-black: 0 0% 0%;
+    --tele2-white: 0 0% 100%;
+    --tele2-pink: 326 100% 60%;
   }
- 
+
   .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
  
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
  
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
  
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
  
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
  
-    --primary: 210 20% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
+    --primary: 326 100% 60%;
+    --primary-foreground: 0 0% 100%;
  
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
  
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
  
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive-foreground: 0 0% 98%;
  
-    --ring: 216 12.2% 83.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
  
@@ -74,4 +81,123 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Neon glow effect */
+.neon-text {
+  text-shadow: 0 0 5px rgba(255, 0, 128, 0.8),
+               0 0 10px rgba(255, 0, 128, 0.5),
+               0 0 15px rgba(255, 0, 128, 0.3),
+               0 0 20px rgba(255, 0, 128, 0.2);
+  animation: flicker 3s infinite alternate;
+}
+
+.neon-text-sm {
+  text-shadow: 0 0 2px rgba(255, 0, 128, 0.8),
+               0 0 4px rgba(255, 0, 128, 0.5),
+               0 0 6px rgba(255, 0, 128, 0.3);
+  animation: flicker 4s infinite alternate;
+}
+
+.link-hover {
+  transition: all 0.3s ease;
+}
+
+.link-hover:hover {
+  text-shadow: 0 0 5px rgba(255, 0, 128, 0.8),
+               0 0 10px rgba(255, 0, 128, 0.5);
+  transform: scale(1.05);
+}
+
+.icon-splash:hover::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, rgba(255,0,128,0.6) 0%, rgba(255,0,128,0) 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: splash 0.6s ease-out;
+}
+
+.aura-effect {
+  position: relative;
+}
+
+.aura-effect::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, rgba(255,0,128,0), rgba(255,0,128,0.3), rgba(255,0,128,0));
+  border-radius: 8px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.aura-effect:hover::before {
+  opacity: 1;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes splash {
+  0% {
+    opacity: 1;
+    transform: scale(0) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2) translate(-25%, -25%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lightning {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.lightning-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.lightning-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/lightning.svg') no-repeat center;
+  background-size: contain;
+  z-index: 1;
+  opacity: 0.6;
+  animation: lightning 2s infinite;
+  pointer-events: none;
 }

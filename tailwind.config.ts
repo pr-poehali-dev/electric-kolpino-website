@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+                // Tele2 theme colors
+                tele2: {
+                    black: 'hsl(var(--tele2-black))',
+                    white: 'hsl(var(--tele2-white))',
+                    pink: 'hsl(var(--tele2-pink))',
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,25 +67,31 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+                'flicker': {
+                    '0%, 18%, 22%, 25%, 53%, 57%, 100%': { opacity: '1' },
+                    '20%, 24%, 55%': { opacity: '0.7' }
+                },
+                'pulse-glow': {
+                    '0%, 100%': { 
+                        boxShadow: '0 0 5px rgba(255, 0, 128, 0.8), 0 0 10px rgba(255, 0, 128, 0.5)' 
+                    },
+                    '50%': { 
+                        boxShadow: '0 0 15px rgba(255, 0, 128, 0.8), 0 0 20px rgba(255, 0, 128, 0.5), 0 0 25px rgba(255, 0, 128, 0.3)' 
+                    }
+                },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'flicker': 'flicker 3s infinite alternate',
+                'pulse-glow': 'pulse-glow 2s infinite'
 			}
 		}
 	},

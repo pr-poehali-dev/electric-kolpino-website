@@ -1,16 +1,20 @@
 
 import Navbar from "@/components/ui/navbar";
 import HeroSection from "@/components/HeroSection";
-import FeaturesSection from "@/components/FeaturesSection";
+import ServicesList from "@/components/ServicesList";
+import MapSection from "@/components/MapSection";
+import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-black">
       <Navbar />
-      <div className="pt-16"> {/* Space for the fixed navbar */}
+      <div className="pt-20"> {/* Space for the fixed navbar */}
         <HeroSection />
-        <FeaturesSection />
+        <ServicesList />
+        <MapSection />
+        <ContactSection />
       </div>
       <FooterSection />
     </div>
