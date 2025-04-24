@@ -27,7 +27,7 @@ const HeroSection = () => {
             Профессиональные электромонтажные работы любой сложности с гарантией качества
           </p>
           
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
             <a href="tel:+79500308830" className="aura-effect">
               <Button className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90 flex items-center space-x-2 animate-pulse-glow">
                 <Phone className="h-4 w-4" />
@@ -50,34 +50,34 @@ const HeroSection = () => {
             </a>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-12">
             <div className="bg-zinc-900/80 p-4 rounded-lg flex items-center space-x-3 aura-effect">
-              <div className="bg-primary/20 p-2 rounded-full">
+              <div className="bg-primary/20 p-2 rounded-full flex-shrink-0">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
-              <div>
-                <h3 className="font-medium neon-text-sm">Быстрый выезд</h3>
-                <p className="text-sm text-zinc-400">В течение часа</p>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-medium neon-text-sm text-base">Быстрый выезд</h3>
+                <p className="text-sm text-zinc-400 truncate">В течение часа</p>
               </div>
             </div>
             
             <div className="bg-zinc-900/80 p-4 rounded-lg flex items-center space-x-3 aura-effect">
-              <div className="bg-primary/20 p-2 rounded-full">
+              <div className="bg-primary/20 p-2 rounded-full flex-shrink-0">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
-              <div>
-                <h3 className="font-medium neon-text-sm">Гарантия качества</h3>
-                <p className="text-sm text-zinc-400">На все работы</p>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-medium neon-text-sm text-base">Гарантия качества</h3>
+                <p className="text-sm text-zinc-400 truncate">На все работы</p>
               </div>
             </div>
             
             <div className="bg-zinc-900/80 p-4 rounded-lg flex items-center space-x-3 aura-effect">
-              <div className="bg-primary/20 p-2 rounded-full">
+              <div className="bg-primary/20 p-2 rounded-full flex-shrink-0">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
-              <div>
-                <h3 className="font-medium neon-text-sm">Доступные цены</h3>
-                <p className="text-sm text-zinc-400">Без переплат</p>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-medium neon-text-sm text-base">Доступные цены</h3>
+                <p className="text-sm text-zinc-400 truncate">Без переплат</p>
               </div>
             </div>
           </div>
