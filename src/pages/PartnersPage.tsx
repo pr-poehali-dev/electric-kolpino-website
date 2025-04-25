@@ -11,9 +11,9 @@ const PartnersPage = () => {
         <div className="py-16 bg-zinc-950">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold text-white neon-text mb-4">Наши партнеры и ресурсы</h1>
+              <h1 className="text-4xl font-bold text-white neon-text mb-4">Сайты Электрик Колпино</h1>
               <p className="text-zinc-400 max-w-2xl mx-auto">
-                Полезные ссылки на дополнительные ресурсы и партнерские сайты
+                Полезные ссылки на дополнительные ресурсы и сайты
               </p>
             </div>
           </div>

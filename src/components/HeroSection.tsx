@@ -8,10 +8,22 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 z-0 opacity-30" 
         style={{ 
-          backgroundImage: `url('/placeholder.svg')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1603513492128-ba7bc9b3e143?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZWxlY3RyaWNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=1600&q=60')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay'
+        }}
+      ></div>
+      
+      {/* Electric lightning overlay */}
+      <div 
+        className="absolute inset-0 z-0 opacity-20" 
+        style={{
+          backgroundImage: `url('/lightning.svg'), linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8))`,
+          backgroundSize: '120%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          mixBlendMode: 'overlay'
         }}
       ></div>
       
@@ -27,7 +39,7 @@ const HeroSection = () => {
             Профессиональные электромонтажные работы любой сложности с гарантией качества
           </p>
           
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-16">
             <a href="tel:+79500308830" className="aura-effect">
               <Button className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90 flex items-center space-x-2 animate-pulse-glow">
                 <Phone className="h-4 w-4" />
@@ -50,8 +62,8 @@ const HeroSection = () => {
             </a>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-12">
-            <div className="bg-zinc-900/80 p-4 rounded-lg flex items-center space-x-3 aura-effect">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
+            <div className="bg-zinc-900/80 p-4 rounded-lg flex items-center space-x-4 aura-effect">
               <div className="bg-primary/20 p-2 rounded-full flex-shrink-0">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
@@ -61,7 +73,7 @@ const HeroSection = () => {
               </div>
             </div>
             
-            <div className="bg-zinc-900/80 p-4 rounded-lg flex items-center space-x-3 aura-effect">
+            <div className="bg-zinc-900/80 p-4 rounded-lg flex items-center space-x-4 aura-effect">
               <div className="bg-primary/20 p-2 rounded-full flex-shrink-0">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
@@ -71,7 +83,7 @@ const HeroSection = () => {
               </div>
             </div>
             
-            <div className="bg-zinc-900/80 p-4 rounded-lg flex items-center space-x-3 aura-effect">
+            <div className="bg-zinc-900/80 p-4 rounded-lg flex items-center space-x-4 aura-effect">
               <div className="bg-primary/20 p-2 rounded-full flex-shrink-0">
                 <Zap className="h-6 w-6 text-primary" />
               </div>

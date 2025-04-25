@@ -1,10 +1,76 @@
 
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M440.9 136.3L288.1 356.1C287.4 357.5 285.7 358.1 284.1 357.9C282.5 357.7 281.2 356.4 280.8 354.8L259.1 256H167.8C166.5 256 165.2 255.4 164.4 254.4C163.5 253.4 163.2 252.1 163.4 250.8L170 182.3C170.4 180.1 172.3 178.5 174.5 178.5H256V86.1C256 84.8 256.6 83.5 257.7 82.8C258.7 82 260.1 81.8 261.3 82.1L369.7 124.7C371.8 125.4 372.9 127.6 372.3 129.8L363.7 160H444.1C445.8 160 447.4 161 448.2 162.6C449 164.1 448.9 166.1 447.8 167.5L440.9 136.3ZM274.2 146.1C275.1 144.3 277.6 143.7 279.4 144.6L359.4 186.6C361.2 187.5 361.8 189.9 360.9 191.7L258.9 366.7C258 368.5 255.5 369.1 253.7 368.2L173.7 326.2C171.9 325.3 171.3 322.9 172.2 321.1L274.2 146.1Z" fill="url(#paint0_linear)" fillOpacity="0.5"/>
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="paint0_linear" x1="306" y1="82" x2="306" y2="368.2" gradientUnits="userSpaceOnUse">
-      <stop stopColor="#FF0080"/>
-      <stop offset="1" stopColor="#FF0080" stopOpacity="0"/>
-    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
   </defs>
+
+  <!-- Multiple lightning bolts with glow effect -->
+  <!-- Main bolt -->
+  <path 
+    d="M500,100 L470,350 L530,380 L450,700 L520,600 L480,900" 
+    stroke="#9b87f5" 
+    stroke-width="8" 
+    fill="none" 
+    filter="url(#glow)" 
+    opacity="0.7"
+  />
+  
+  <!-- Secondary bolts -->
+  <path 
+    d="M400,150 L430,370 L370,500 L410,630 L350,800" 
+    stroke="#9b87f5" 
+    stroke-width="4" 
+    fill="none" 
+    filter="url(#glow)" 
+    opacity="0.5"
+  />
+  
+  <path 
+    d="M600,180 L570,400 L650,480 L590,700 L640,850" 
+    stroke="#9b87f5" 
+    stroke-width="5" 
+    fill="none" 
+    filter="url(#glow)" 
+    opacity="0.6"
+  />
+  
+  <!-- Smaller branch bolts -->
+  <path 
+    d="M470,350 L390,320" 
+    stroke="#9b87f5" 
+    stroke-width="3" 
+    fill="none" 
+    filter="url(#glow)" 
+    opacity="0.6"
+  />
+  
+  <path 
+    d="M530,380 L620,340" 
+    stroke="#9b87f5" 
+    stroke-width="3" 
+    fill="none" 
+    filter="url(#glow)" 
+    opacity="0.5"
+  />
+  
+  <path 
+    d="M450,700 L360,680" 
+    stroke="#9b87f5" 
+    stroke-width="3" 
+    fill="none" 
+    filter="url(#glow)" 
+    opacity="0.4"
+  />
+  
+  <path 
+    d="M520,600 L610,580" 
+    stroke="#9b87f5" 
+    stroke-width="2" 
+    fill="none" 
+    filter="url(#glow)" 
+    opacity="0.5"
+  />
 </svg>

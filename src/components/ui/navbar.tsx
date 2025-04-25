@@ -44,7 +44,7 @@ const Navbar = () => {
               Услуги
             </Link>
             <Link to="/partners" className="text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium link-hover">
-              Партнеры
+              Сайты Электрика
             </Link>
             <Link to="/contact" className="text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium link-hover">
               Контакты
@@ -92,7 +92,7 @@ const Navbar = () => {
               className="text-white hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
               onClick={toggleMenu}
             >
-              Партнеры
+              Сайты Электрика
             </Link>
             <Link
               to="/contact"
